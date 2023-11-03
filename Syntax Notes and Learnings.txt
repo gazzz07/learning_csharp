@@ -1,0 +1,57 @@
+Console is a class, which stores methods which can be used (things like WriteLine, ReadLine).
+An Argument is placed inside the brackets after the method, which tells the method what to do.
+A statement is a line of code.
+
+Class.Method(Argument); <-- Statement
+
+String = "string", int = 43, decimal = 6.5m, bool = true, char = 'a', 
+
+escape characters = \n = new line, \t = new tab
+
+declare variable eg: int myNumber = 7; string myName = George;
+
+++ increments an integer by 1
+-- decrements an integer by 1
+
+String Concatenation = Console.WriteLine("I am " + int + " years old");
+String Interpolation = Console.WriteLine($"I am {int} years old");
+
+Taking input from user - string userInput = Console.ReadLine();
+
+Conditional (branching) statements - if (name = George) 
+										{ 
+											Console.WriteLine("Hello, George!");
+										} else {
+											Console.WriteLine("Your name isn't George!");
+										}
+
+dotnet class library example - char favouriteLetter = Console.ReadLine();
+								if (favouriteLetter.Trim().ToLower() == "a"
+								{ 
+									Console.WriteLine("It's A!");
+								}
+
+Creating Methods - void newMethod(string method) { --- (void is signature and indicates it won't return anything, newMethod is the name, arguments in brackets)
+Methods are used when you need to use the same output in multiple areas of your code, instead of running the same statement over and over.
+
+Simple method - birthdaySong();
+				birthdaySong();
+				Console.WriteLine("Happy birthday to George!");
+				birthdaySong();
+
+				static void birthdaySong()
+				{
+					Console.WriteLine("Happy birthday to you!");
+				}
+
+LEARN MORE ABOUT SWITCH STATEMENTS ( THEY ARE SIMILAR TO IF STATEMENTS BUT ARE CLEANER FOR MORE THAN 5 IFS )
+
+Random number generators - int randomNumber = new Random();
+							int firstNumber = randomNumber.Next(1,7) //first is inclusive, last is exclusive.
+							
+Turn an integer into a string int.Parse(firstNumber);
+
+For loops - for(int i = 0; i < 5; i++)  //i is used as index. While it's less than 5, increment by one and continue the loop until it is 5.
+
+
+
