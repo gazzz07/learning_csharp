@@ -1,0 +1,17 @@
+void divisionGame() {
+    Random random = new Random();
+    int[] numerators = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+    int[] denominators = {1, 2, 5, 10};
+    int firstNumber = numerators[random.Next(numerators.Length)];
+    int secondNumber = denominators[random.Next(denominators.Length)];
+
+    Console.WriteLine($"What is {firstNumber} / {secondNumber}");
+    int answer = Convert.ToInt32(Console.ReadLine());
+
+    if (answer == firstNumber / secondNumber) {
+        Console.WriteLine("That's correct!");
+    } else {
+        Console.WriteLine("That's incorrect!");
+    }
+
+}
