@@ -12,3 +12,17 @@ C:\Git\FirstProject\obj\Debug\net7.0\refint\FirstProject.dll
 C:\Git\FirstProject\obj\Debug\net7.0\FirstProject.pdb
 C:\Git\FirstProject\obj\Debug\net7.0\FirstProject.genruntimeconfig.cache
 C:\Git\FirstProject\obj\Debug\net7.0\ref\FirstProject.dll
+C:\Git\CSharp\FirstProject\bin\Debug\net7.0\FirstProject.exe
+C:\Git\CSharp\FirstProject\bin\Debug\net7.0\FirstProject.deps.json
+C:\Git\CSharp\FirstProject\bin\Debug\net7.0\FirstProject.runtimeconfig.json
+C:\Git\CSharp\FirstProject\bin\Debug\net7.0\FirstProject.dll
+C:\Git\CSharp\FirstProject\bin\Debug\net7.0\FirstProject.pdb
+C:\Git\CSharp\FirstProject\obj\Debug\net7.0\FirstProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\CSharp\FirstProject\obj\Debug\net7.0\FirstProject.AssemblyInfoInputs.cache
+C:\Git\CSharp\FirstProject\obj\Debug\net7.0\FirstProject.AssemblyInfo.cs
+C:\Git\CSharp\FirstProject\obj\Debug\net7.0\FirstProject.csproj.CoreCompileInputs.cache
+C:\Git\CSharp\FirstProject\obj\Debug\net7.0\FirstProject.dll
+C:\Git\CSharp\FirstProject\obj\Debug\net7.0\refint\FirstProject.dll
+C:\Git\CSharp\FirstProject\obj\Debug\net7.0\FirstProject.pdb
+C:\Git\CSharp\FirstProject\obj\Debug\net7.0\FirstProject.genruntimeconfig.cache
+C:\Git\CSharp\FirstProject\obj\Debug\net7.0\ref\FirstProject.dll

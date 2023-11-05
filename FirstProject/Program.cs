@@ -1,35 +1,64 @@
-﻿Console.WriteLine("What's your name?: ");
+﻿using System.Globalization;
+using System.Reflection.Metadata.Ecma335;
+using System.Threading.Tasks;
+using Microsoft.VisualBasic;
+
+char playAgain;
+int score;
+var games = new List<string>();
+
+Console.WriteLine("What's your name?: ");
 string playerName = Console.ReadLine();
-Console.WriteLine($"Hello {playerName}, let's play a maths game!\nWould you like to play an Addition, Subtraction, Division or Multiplication game?: ");
+Console.WriteLine("-----");
+Console.WriteLine($"Hello {playerName}, let's play a maths game!");
+
+do
+{
+Console.WriteLine("Would you like to play an Addition, Subtraction, Division or Multiplication game?: ");
 string chosenGame = Console.ReadLine();
+
+score = 0;
 
 if (chosenGame == "Addition") {
     Console.WriteLine("You chose Addition, let's begin!");
     additionGame();
+    Console.WriteLine($"Score: {score}");
+    games.Add($"{DateTime.Now} - Addition Game - Score: {score}");
 } else if (chosenGame == "Subtraction") {
     Console.WriteLine("You chose Subtraction, let's begin!");
     subtractionGame();
+    Console.WriteLine($"Score: {score}");
+    games.Add($"{DateTime.Now} - Subtraction Game - Score: {score}");
 } else if (chosenGame == "Division") {
     Console.WriteLine("You chose Division, let's begin!");
     divisionGame();
+    Console.WriteLine($"Score: {score}");
+    games.Add($"{DateTime.Now} - Division Game - Score: {score}");
 } else if (chosenGame == "Multiplication") {
     Console.WriteLine("You chose Multiplication, let's begin!");
     multiplicationGame();
+    Console.WriteLine($"Score: {score}");
+    games.Add($"{DateTime.Now} - Multiplication Game - Score: {score}");
 } else {
     Console.WriteLine("Invalid answer!");
 }
+Console.WriteLine("-----");
+Console.WriteLine($"Here are your recent scores:");
+GamesHistory();
+Console.WriteLine("-----");
+Console.WriteLine($"Would you like to play again, {playerName}? (y/n)");
+playAgain = Convert.ToChar(Console.ReadLine());
 
-Console.WriteLine($"Would you like to play again, {playerName}? (Y/N)");
-char playAgain = Convert.ToChar(Console.ReadLine());
-
-if (playAgain == Y) {
-
-} else {
+}
+while (playAgain == 'y');
+if (playAgain == 'n') {
     Console.WriteLine("Goodbye!");
 }
 
-
 void additionGame() {
+    
+    for(int i = 0; i < 5; i++) {
+    
     Random randomNumber = new Random();
     int firstNumber = randomNumber.Next(1,10);
     int secondNumber = randomNumber.Next(1,10);
@@ -39,13 +68,19 @@ void additionGame() {
 
     if (answer == firstNumber + secondNumber) {
         Console.WriteLine("That's correct!");
+        score++;
     } else {
         Console.WriteLine("That's incorrect!");
+    }
+
     }
 
 }
 
 void subtractionGame() {
+
+    for(int i = 0; i < 5; i++) {
+
     Random randomNumber = new Random();
     int firstNumber = randomNumber.Next(1,10);
     int secondNumber = randomNumber.Next(1,10);
@@ -55,30 +90,36 @@ void subtractionGame() {
 
     if (answer == firstNumber - secondNumber) {
         Console.WriteLine("That's correct!");
+        score++;
     } else {
         Console.WriteLine("That's incorrect!");
+    }
     }
 }
 
 void divisionGame() {
-    Random random = new Random();
-    int[] numerators = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
-    int[] denominators = {1, 2, 5, 10};
-    int firstNumber = numerators[random.Next(numerators.Length)];
-    int secondNumber = denominators[random.Next(denominators.Length)];
+    
+    for(int i = 0; i < 5; i++) {
 
-    Console.WriteLine($"What is {firstNumber} / {secondNumber}");
-    int answer = Convert.ToInt32(Console.ReadLine());
+    var divisionNumbers = DivisionNumbers();
+    int firstNumber = divisionNumbers[0];
+    int secondNumber = divisionNumbers[1];
+    Console.WriteLine($"What is {firstNumber} / {secondNumber}?:");
+    int additionAnswer = Convert.ToInt32(Console.ReadLine());
 
-    if (answer == firstNumber / secondNumber) {
+    if (additionAnswer == firstNumber / secondNumber) {
         Console.WriteLine("That's correct!");
+        score++;
     } else {
         Console.WriteLine("That's incorrect!");
     }
-
-}
+    }
+}    
 
 void multiplicationGame() {
+    
+    for(int i = 0; i < 5; i++) {
+    
     Random randomNumber = new Random();
     int firstNumber = randomNumber.Next(1,10);
     int secondNumber = randomNumber.Next(1,10);
@@ -88,7 +129,32 @@ void multiplicationGame() {
 
     if (additionAnswer == firstNumber * secondNumber) {
         Console.WriteLine("That's correct!");
+        score++;
     } else {
         Console.WriteLine("That's incorrect!");
     }
+    }
+}
+
+int[] DivisionNumbers() { //unsure why you would declare this as an array across the whole thing when you have to declare individually for most of it anyway?
+    Random randomNumber = new Random();
+    int firstNumber = randomNumber.Next(1,99);
+    int secondNumber = randomNumber.Next(1,99);
+
+    int[] result = new int[2];
+    while (firstNumber % secondNumber != 0) 
+    {
+        firstNumber = randomNumber.Next(1,99);
+        secondNumber = randomNumber.Next(1,99);
+    }
+
+    result[0] = firstNumber;
+    result[1] = secondNumber;
+
+    return result;
+}
+
+void GamesHistory() {
+    foreach (var game in games)
+    Console.WriteLine(game);
 }

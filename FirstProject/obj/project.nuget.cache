@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p29HOyFvZY737cepbXqnkKM+aE+7c8F5B+fbKPUM3V7SDrUrQIE4TtfigjBlK26c7udxRvYir2FSqHoHj3gqww==",
+  "dgSpecHash": "ErP8ZUFMNogtNICRVHwBRI+2qVCN+Gm9g5H+6vpDDZQ4F8hxWZGSHN8EPkoqMRqRz05AJzTdgSQ6SeLpvAE82g==",
   "success": true,
-  "projectFilePath": "C:\\Git\\FirstProject\\FirstProject.csproj",
+  "projectFilePath": "C:\\Git\\CSharp\\FirstProject\\FirstProject.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

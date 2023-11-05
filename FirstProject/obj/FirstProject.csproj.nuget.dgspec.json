@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\FirstProject\\FirstProject.csproj": {}
+    "C:\\Git\\CSharp\\FirstProject\\FirstProject.csproj": {}
   },
   "projects": {
-    "C:\\Git\\FirstProject\\FirstProject.csproj": {
+    "C:\\Git\\CSharp\\FirstProject\\FirstProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\FirstProject\\FirstProject.csproj",
+        "projectUniqueName": "C:\\Git\\CSharp\\FirstProject\\FirstProject.csproj",
         "projectName": "FirstProject",
-        "projectPath": "C:\\Git\\FirstProject\\FirstProject.csproj",
+        "projectPath": "C:\\Git\\CSharp\\FirstProject\\FirstProject.csproj",
         "packagesPath": "C:\\Users\\seymo\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\FirstProject\\obj\\",
+        "outputPath": "C:\\Git\\CSharp\\FirstProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
