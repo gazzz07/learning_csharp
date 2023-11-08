@@ -73,7 +73,12 @@ CLASSES - (things like Console. and DateTime.) - to add a new class
 		namespace MyFirstProgram
 		{
 			internal class Menu							internal means it can be accessed from within this project (if blank it's private)
-			{
-			}
+			{											public can be accessed from anywhere
+			}											private only from this class
 		}
 
+NAMESPACES such as System mean you can use Console.WriteLine without needing to use the word system in front as it's applying it to the whole class(program?)
+
+To call a class from another class (ie if you wanted to pull the main menu from another area in to the main program) - you can do by calling the class (ie mainMenu.Menu)
+
+WRITE THE PROGRAM, THEN REFACTOR USING CLASSES INITIALLY

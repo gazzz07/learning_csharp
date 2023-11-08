@@ -1,9 +1,10 @@
-using MyFirstProgram;
+using FirstProject;
+
 namespace MyFirstProgram
 {
     internal class GameEngine
     {
-       internal void DivisionGame(string message)
+        internal void DivisionGame(string message)
 {
     var score = 0;
 
@@ -34,10 +35,10 @@ namespace MyFirstProgram
         if (i == 4) Console.WriteLine($"Game over. Your final score is {score}. Press any key to go back to the main menu.");
     }
 
-    Helpers.AddToHistory(score, "Division");
+    Helpers.AddToHistory(score, GameType.Division);
 }
 
-internal void MultiplicationGame(string message)
+        internal void MultiplicationGame(string message)
 {
     var random = new Random();
     var score = 0;
@@ -71,10 +72,10 @@ internal void MultiplicationGame(string message)
         if (i == 4) Console.WriteLine($"Game over. Your final score is {score}. Press any key to go back to the main menu.");
     }
 
-    Helpers.AddToHistory(score, "Multiplication");
+    Helpers.AddToHistory(score, GameType.Multiplication);
 }
 
-internal void SubtractionGame(string message)
+        internal void SubtractionGame(string message)
 {
     var random = new Random();
     var score = 0;
@@ -108,10 +109,10 @@ internal void SubtractionGame(string message)
         if (i == 4) Console.WriteLine($"Game over. Your final score is {score}. Press any key to go back to the main menu.");
     }
 
-    Helpers.AddToHistory(score, "Subtraction");
+    Helpers.AddToHistory(score, GameType.Subtraction);
 }
 
-internal void AdditionGame(string message)
+        internal void AdditionGame(string message)
 {
     var random = new Random();
     var score = 0;
@@ -149,7 +150,7 @@ internal void AdditionGame(string message)
         }
     }
 
-    Helpers.AddToHistory(score, "Addition");
+    Helpers.AddToHistory(score, GameType.Addition);
 }
     }
 }

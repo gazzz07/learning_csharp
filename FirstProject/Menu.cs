@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MyFirstProgram;
 
 namespace MyFirstProgram
 {
@@ -36,7 +35,7 @@ Q - Quit the program");
         switch (gameSelected.Trim().ToLower())
         {
             case "v":
-                Helpers.GetGames();
+                Helpers.PrintGames();
                 break;
             case "a":
                 gameEngine.AdditionGame("Addition game");
