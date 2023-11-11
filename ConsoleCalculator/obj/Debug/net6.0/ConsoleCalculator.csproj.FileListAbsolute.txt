@@ -1,0 +1,14 @@
+C:\Git\CSharp\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.exe
+C:\Git\CSharp\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.deps.json
+C:\Git\CSharp\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.runtimeconfig.json
+C:\Git\CSharp\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.dll
+C:\Git\CSharp\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.pdb
+C:\Git\CSharp\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\CSharp\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.AssemblyInfoInputs.cache
+C:\Git\CSharp\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.AssemblyInfo.cs
+C:\Git\CSharp\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.csproj.CoreCompileInputs.cache
+C:\Git\CSharp\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.dll
+C:\Git\CSharp\ConsoleCalculator\obj\Debug\net6.0\refint\ConsoleCalculator.dll
+C:\Git\CSharp\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.pdb
+C:\Git\CSharp\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.genruntimeconfig.cache
+C:\Git\CSharp\ConsoleCalculator\obj\Debug\net6.0\ref\ConsoleCalculator.dll

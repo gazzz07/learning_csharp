@@ -82,3 +82,23 @@ NAMESPACES such as System mean you can use Console.WriteLine without needing to 
 To call a class from another class (ie if you wanted to pull the main menu from another area in to the main program) - you can do by calling the class (ie mainMenu.Menu)
 
 WRITE THE PROGRAM, THEN REFACTOR USING CLASSES INITIALLY
+
+---
+
+Writing XAML
+
+<ContentView> - what is visible on the page
+<VerticalStackLayout> - how it is oriented, stacked vertically
+Spacing="25"
+Padding="50" - both can be added to vertical stack layout or other tags to add padding and spacing
+<Label> - Text="display text in your program"
+FontSize="32" - set fontsize of a Text field
+HorizontalOptions="Center" - centers whatever is in the tag this applies to
+
+<Grid> - Defines a grid
+<Grid.RowDefinitions> - The containing tag for multiple rows.
+<RowDefinition> - each of these tags within a G.RD tag will give a rows
+Grid.ColumnDefinitions> - The same as RD, but for columns
+<ColumnDefinition> - as above
+
+<Button> - Defines a button. Can be self-closing and include Text and Grid.Column="0" or Grid.Row="3" (Grids are 0-based) Can also be given BackgroundColor="Aquamarine"
