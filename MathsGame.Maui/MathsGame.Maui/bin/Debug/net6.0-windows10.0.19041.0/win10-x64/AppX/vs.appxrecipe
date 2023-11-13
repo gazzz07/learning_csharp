@@ -29,29 +29,29 @@
     <AppXManifest Include="C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-11T11:48:37.282</Modified>
+      <Modified>2023-11-13T15:20:39.115</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-11-11T11:48:37.034</Modified>
+      <Modified>2023-11-13T14:48:30.606</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MathsGame.Maui.runtimeconfig.json">
       <PackagePath>MathsGame.Maui.runtimeconfig.json</PackagePath>
-      <Modified>2023-11-11T10:55:27.662</Modified>
+      <Modified>2023-11-13T14:48:30.392</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MathsGame.Maui.dll">
       <PackagePath>MathsGame.Maui.dll</PackagePath>
-      <Modified>2023-11-11T11:48:36.245</Modified>
+      <Modified>2023-11-13T15:20:38.034</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MathsGame.Maui.exe</PackagePath>
-      <Modified>2023-11-11T11:48:36.250</Modified>
+      <Modified>2023-11-13T15:20:38.035</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MathsGame.Maui.deps.json">
       <PackagePath>MathsGame.Maui.deps.json</PackagePath>
-      <Modified>2023-11-11T11:43:13.626</Modified>
+      <Modified>2023-11-13T14:48:30.273</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\seymo\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.24\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1057,6 +1057,26 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
       <Modified>2022-09-07T21:54:34.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\seymo\.nuget\packages\sqlite-net-pcl\1.8.116\lib\netstandard2.0\SQLite-net.dll">
+      <PackagePath>SQLite-net.dll</PackagePath>
+      <Modified>2021-09-02T21:04:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\seymo\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll">
+      <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
+      <Modified>2020-09-03T17:13:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\seymo\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll">
+      <PackagePath>SQLitePCLRaw.nativelibrary.dll</PackagePath>
+      <Modified>2020-09-03T17:13:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\seymo\.nuget\packages\sqlitepclraw.core\2.0.4\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+      <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
+      <Modified>2020-09-03T17:13:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\seymo\.nuget\packages\sqlitepclraw.provider.dynamic_cdecl\2.0.4\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll">
+      <PackagePath>SQLitePCLRaw.provider.dynamic_cdecl.dll</PackagePath>
+      <Modified>2020-09-03T17:13:18.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\seymo\.nuget\packages\microsoft.graphics.win2d\1.0.3.1\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2022-04-28T15:57:10.000</Modified>
@@ -1064,6 +1084,10 @@
     <AppxPackagedFile Include="C:\Users\seymo\.nuget\packages\microsoft.windowsappsdk\1.1.5\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2022-09-07T21:54:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\seymo\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.0.4\runtimes\win-x64\native\e_sqlite3.dll">
+      <PackagePath>e_sqlite3.dll</PackagePath>
+      <Modified>2020-08-17T14:38:20.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\seymo\.nuget\packages\microsoft.maui.controls.ref.win\6.0.553\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

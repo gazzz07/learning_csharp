@@ -47,7 +47,8 @@
                 <Button Grid.Row="1"
                         Grid.ColumnSpan="4"
                         BackgroundColor="Aquamarine"
-                        Text="View Previous Games"/>
+                        Text="View Previous Games"
+                        Clicked="OnViewPreviousGamesChosen"/>
             </Grid>
         </VerticalStackLayout>
     </ContentView>

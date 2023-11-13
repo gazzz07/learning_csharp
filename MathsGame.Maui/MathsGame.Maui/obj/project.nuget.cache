@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VFN2JSZ4tkcPJ1TO5frF+b1flQNB2YD/mLEHZ42IdCvpnxIjANSyDYvKjJVzq8Pi21kI+9/AXvQ7N2IhjbuZAw==",
+  "dgSpecHash": "yUmP2oANV+1bSgkbKoULe5WM9hPi0OgsMX6iXKr7b1vKQ++1sBGEnhqdt7UunaLyKbFmgjzXeoTLD9VTFOMgTA==",
   "success": true,
   "projectFilePath": "C:\\Git\\CSharp\\MathsGame.Maui\\MathsGame.Maui\\MathsGame.Maui.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,13 @@
     "C:\\Users\\seymo\\.nuget\\packages\\microsoft.maui.graphics.win2d.winui.desktop\\6.0.501\\microsoft.maui.graphics.win2d.winui.desktop.6.0.501.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\seymo\\.nuget\\packages\\microsoft.windowsappsdk\\1.1.5\\microsoft.windowsappsdk.1.1.5.nupkg.sha512",
+    "C:\\Users\\seymo\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
+    "C:\\Users\\seymo\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
+    "C:\\Users\\seymo\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\seymo\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\seymo\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.4\\sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
     "C:\\Users\\seymo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\seymo\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\seymo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\seymo\\.nuget\\packages\\microsoft.maui.essentials.ref.win\\6.0.553\\microsoft.maui.essentials.ref.win.6.0.553.nupkg.sha512",
     "C:\\Users\\seymo\\.nuget\\packages\\microsoft.maui.core.runtime.win\\6.0.553\\microsoft.maui.core.runtime.win.6.0.553.nupkg.sha512",

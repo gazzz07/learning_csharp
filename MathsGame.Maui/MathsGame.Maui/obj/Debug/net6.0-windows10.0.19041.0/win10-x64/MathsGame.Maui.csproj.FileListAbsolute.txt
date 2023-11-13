@@ -358,3 +358,9 @@ C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\obj\Debug\net6.0-windows10.0.19041.0
 C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SQLite-net.dll
+C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_v2.dll
+C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.nativelibrary.dll
+C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
+C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\e_sqlite3.dll
