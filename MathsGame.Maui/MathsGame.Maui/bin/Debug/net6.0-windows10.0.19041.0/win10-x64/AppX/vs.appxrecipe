@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-13T15:20:39.115</Modified>
+      <Modified>2023-11-13T22:58:10.922</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MathsGame.Maui.dll">
       <PackagePath>MathsGame.Maui.dll</PackagePath>
-      <Modified>2023-11-13T15:20:38.034</Modified>
+      <Modified>2023-11-13T22:58:09.610</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MathsGame.Maui.exe</PackagePath>
-      <Modified>2023-11-13T15:20:38.035</Modified>
+      <Modified>2023-11-13T22:58:09.616</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Git\CSharp\MathsGame.Maui\MathsGame.Maui\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MathsGame.Maui.deps.json">
       <PackagePath>MathsGame.Maui.deps.json</PackagePath>
