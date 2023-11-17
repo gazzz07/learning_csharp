@@ -12,3 +12,4 @@ C:\Git\CSharp\ConsoleMathsGame\ConsoleMathsGame\obj\Debug\net6.0\refint\ConsoleM
 C:\Git\CSharp\ConsoleMathsGame\ConsoleMathsGame\obj\Debug\net6.0\ConsoleMathsGame.pdb
 C:\Git\CSharp\ConsoleMathsGame\ConsoleMathsGame\obj\Debug\net6.0\ConsoleMathsGame.genruntimeconfig.cache
 C:\Git\CSharp\ConsoleMathsGame\ConsoleMathsGame\obj\Debug\net6.0\ref\ConsoleMathsGame.dll
+C:\Git\CSharp\ConsoleMathsGame\ConsoleMathsGame\obj\Debug\net6.0\ConsoleMathsGame.sourcelink.json
