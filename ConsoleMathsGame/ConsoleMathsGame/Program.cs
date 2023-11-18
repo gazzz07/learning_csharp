@@ -23,20 +23,20 @@ void MenuLogic()
 }
 void GameLogic()
 {
-    char chosenDifficulty;
+    string chosenDifficulty;
     var gameChoice = Console.ReadLine();
 
     switch (gameChoice)
     {
         case "+":
             Console.WriteLine("Easy or Hard? (E/H): ");
-            chosenDifficulty = Convert.ToChar(Console.ReadLine().ToLower().Trim());
-            if (chosenDifficulty == 'e')
+            chosenDifficulty = (Console.ReadLine().ToLower().Trim());
+            if (chosenDifficulty == "e")
             {
                 Console.Clear();
                 AdditionGameEasy();
             }
-            else if (chosenDifficulty == 'h')
+            else if (chosenDifficulty == "h")
             {
                 Console.Clear();
                 AdditionGameHard();
@@ -50,13 +50,13 @@ void GameLogic()
 
         case "-":
             Console.WriteLine("Easy or Hard? (E/H): ");
-            chosenDifficulty = Convert.ToChar(Console.ReadLine().ToLower().Trim());
-            if (chosenDifficulty == 'e')
+            chosenDifficulty = (Console.ReadLine().ToLower().Trim());
+            if (chosenDifficulty == "e")
             {
                 Console.Clear();
                 SubtractionGameEasy();
             }
-            else if (chosenDifficulty == 'h')
+            else if (chosenDifficulty == "h")
             {
                 Console.Clear();
                 SubtractionGameHard();
@@ -71,13 +71,13 @@ void GameLogic()
         case "*":
 
             Console.WriteLine("Easy or Hard? (E/H): ");
-            chosenDifficulty = Convert.ToChar(Console.ReadLine().ToLower().Trim());
-            if (chosenDifficulty == 'e')
+            chosenDifficulty = (Console.ReadLine().ToLower().Trim());
+            if (chosenDifficulty == "e")
             {
                 Console.Clear();
                 MultiplicationGameEasy();
             }
-            else if (chosenDifficulty == 'h')
+            else if (chosenDifficulty == "h")
             {
                 Console.Clear();
                 MultiplicationGameHard();
@@ -92,13 +92,13 @@ void GameLogic()
         case "/":
 
             Console.WriteLine("Easy or Hard? (E/H): ");
-            chosenDifficulty = Convert.ToChar(Console.ReadLine().ToLower().Trim());
-            if (chosenDifficulty == 'e')
+            chosenDifficulty = (Console.ReadLine().ToLower().Trim());
+            if (chosenDifficulty == "e")
             {
                 Console.Clear();
                 DivisionGameEasy();
             }
-            else if (chosenDifficulty == 'h')
+            else if (chosenDifficulty == "h")
             {
                 Console.Clear();
                 DivisionGameHard();
@@ -603,10 +603,13 @@ void MenuReturn()
             case "n":
 
                 Console.WriteLine("Goodbye!");
+                Console.WriteLine("Press any key");
+                Console.ReadKey();
                 break;
             default:
             Console.Clear();
             Console.WriteLine("Invalid");
+            MenuReturn();
             break;
 
         }
