@@ -1,9 +1,6 @@
 ﻿using System.Diagnostics;
+using System.Threading.Tasks.Sources;
 
-int correctAnswer;
-int firstNumber;
-int secondNumber;
-int score;
 var games = new List<String>();
 
 MainProgramRepeat();
@@ -16,7 +13,7 @@ void MainProgramRepeat()
 }
 void MenuLogic()
 {
-    score = 0;
+    int score = 0;
     Console.WriteLine("Welcome! Which game would you like to play?");
     Console.WriteLine("+ = Addition\n- = Subtraction\n* = Multiplication\n/ = Division\nR = Random Game\nV = View Previous Games\nQ = Quit");
     Console.WriteLine("-----");
@@ -154,6 +151,7 @@ void AdditionGameEasy()
 {
     Console.WriteLine("How many questions?: ");
     string numQuestionsIn = Console.ReadLine();
+    int score = 0;
 
     if (!int.TryParse(numQuestionsIn, out int numQuestionsOut))
     {
@@ -167,9 +165,9 @@ void AdditionGameEasy()
         {
 
             Random random = new Random();
-            firstNumber = random.Next(1, 9);
-            secondNumber = random.Next(1, 9);
-            correctAnswer = firstNumber + secondNumber;
+            int firstNumber = random.Next(1, 9);
+            int secondNumber = random.Next(1, 9);
+            int correctAnswer = firstNumber + secondNumber;
 
             Console.WriteLine($"{firstNumber} + {secondNumber}");
 
@@ -197,31 +195,6 @@ void AdditionGameEasy()
             {
                 Console.WriteLine("Invalid answer");
             }
-            /*int userGuess;
-            bool validInput;
-
-            do
-            {
-                Console.WriteLine("Enter your guess:");
-                string input = Console.ReadLine();
-                validInput = int.TryParse(input, out userGuess);
-
-                if (!validInput)
-                {
-                    Console.WriteLine("Invalid input. Please enter a number.");
-                }
-
-            } while (!validInput);
-
-            if (userGuess == correctAnswer)
-            {
-                Console.WriteLine("Correct Answer!\n");
-                score++;
-            }
-            else
-            {
-                Console.WriteLine("Incorrect Answer!\n");
-            }*/
         }
 
         stopwatch.Stop();
@@ -237,6 +210,7 @@ void SubtractionGameEasy()
 {
     Console.WriteLine("How many questions?: ");
     string numQuestionsIn = Console.ReadLine();
+    int score = 0;
 
     if (!int.TryParse(numQuestionsIn, out int numQuestionsOut))
     {
@@ -251,9 +225,9 @@ void SubtractionGameEasy()
         {
 
             Random random = new Random();
-            firstNumber = random.Next(1, 9);
-            secondNumber = random.Next(1, 9);
-            correctAnswer = firstNumber - secondNumber;
+            int firstNumber = random.Next(1, 9);
+            int secondNumber = random.Next(1, 9);
+            int correctAnswer = firstNumber - secondNumber;
 
             Console.WriteLine($"{firstNumber} - {secondNumber}");
 
@@ -266,6 +240,7 @@ void SubtractionGameEasy()
                 if (userGuess == correctAnswer)
                 {
                     Console.WriteLine("Correct Answer!\n");
+                    score++;
                 }
                 else if (userGuess != correctAnswer)
                 {
@@ -294,6 +269,7 @@ void MultiplicationGameEasy()
 {
     Console.WriteLine("How many questions?: ");
     string numQuestionsIn = Console.ReadLine();
+    int score = 0;
 
     if (!int.TryParse(numQuestionsIn, out int numQuestionsOut))
     {
@@ -308,9 +284,9 @@ void MultiplicationGameEasy()
         {
 
             Random random = new Random();
-            firstNumber = random.Next(1, 9);
-            secondNumber = random.Next(1, 9);
-            correctAnswer = firstNumber * secondNumber;
+            int firstNumber = random.Next(1, 9);
+            int secondNumber = random.Next(1, 9);
+            int correctAnswer = firstNumber * secondNumber;
 
             Console.WriteLine($"{firstNumber} * {secondNumber}");
 
@@ -323,6 +299,7 @@ void MultiplicationGameEasy()
                 if (userGuess == correctAnswer)
                 {
                     Console.WriteLine("Correct Answer!\n");
+                    score++;
                 }
                 else if (userGuess != correctAnswer)
                 {
@@ -351,6 +328,7 @@ void DivisionGameEasy()
 {
     Console.WriteLine("How many questions?: ");
     string numQuestionsIn = Console.ReadLine();
+    int score = 0;
 
     if (!int.TryParse(numQuestionsIn, out int numQuestionsOut))
     {
@@ -364,10 +342,12 @@ void DivisionGameEasy()
         for (int i = 0; i < numQuestionsOut; i++)
         {
 
-            DivisionNumbersEasy();
+            var divisionNumbers = DivisionNumbersHard();
+            int firstNumber = divisionNumbers[0];
+            int secondNumber = divisionNumbers[1];
 
             Console.WriteLine($"{firstNumber} / {secondNumber}");
-            correctAnswer = firstNumber / secondNumber;
+            int correctAnswer = firstNumber / secondNumber;
 
             Console.WriteLine("Enter your guess:");
             string userInput = Console.ReadLine();
@@ -378,6 +358,7 @@ void DivisionGameEasy()
                 if (userGuess == correctAnswer)
                 {
                     Console.WriteLine("Correct Answer!\n");
+                    score++;
                 }
                 else if (userGuess != correctAnswer)
                 {
@@ -406,6 +387,7 @@ void AdditionGameHard()
 {
     Console.WriteLine("How many questions?: ");
     string numQuestionsIn = Console.ReadLine();
+    int score = 0;
 
     if (!int.TryParse(numQuestionsIn, out int numQuestionsOut))
     {
@@ -420,9 +402,9 @@ void AdditionGameHard()
         {
 
             Random random = new Random();
-            firstNumber = random.Next(10, 99);
-            secondNumber = random.Next(10, 99);
-            correctAnswer = firstNumber + secondNumber;
+            int firstNumber = random.Next(10, 99);
+            int secondNumber = random.Next(10, 99);
+            int correctAnswer = firstNumber + secondNumber;
 
             Console.WriteLine($"{firstNumber} + {secondNumber}");
 
@@ -435,6 +417,7 @@ void AdditionGameHard()
                 if (userGuess == correctAnswer)
                 {
                     Console.WriteLine("Correct Answer!\n");
+                    score++;
                 }
                 else if (userGuess != correctAnswer)
                 {
@@ -463,6 +446,7 @@ void SubtractionGameHard()
 {
     Console.WriteLine("How many questions?: ");
     string numQuestionsIn = Console.ReadLine();
+    int score = 0;
 
     if (!int.TryParse(numQuestionsIn, out int numQuestionsOut))
     {
@@ -477,9 +461,9 @@ void SubtractionGameHard()
         {
 
             Random random = new Random();
-            firstNumber = random.Next(10, 99);
-            secondNumber = random.Next(10, 99);
-            correctAnswer = firstNumber - secondNumber;
+            int firstNumber = random.Next(10, 99);
+            int secondNumber = random.Next(10, 99);
+            int correctAnswer = firstNumber - secondNumber;
 
             Console.WriteLine($"{firstNumber} - {secondNumber}");
 
@@ -496,6 +480,7 @@ void SubtractionGameHard()
                 else if (userGuess != correctAnswer)
                 {
                     Console.WriteLine("Incorrect Answer");
+                    score++;
                 }
                 else
                 {
@@ -520,6 +505,7 @@ void MultiplicationGameHard()
 {
     Console.WriteLine("How many questions?: ");
     string numQuestionsIn = Console.ReadLine();
+    int score = 0;
 
     if (!int.TryParse(numQuestionsIn, out int numQuestionsOut))
     {
@@ -534,9 +520,9 @@ void MultiplicationGameHard()
         {
 
             Random random = new Random();
-            firstNumber = random.Next(10, 99);
-            secondNumber = random.Next(10, 99);
-            correctAnswer = firstNumber * secondNumber;
+            int firstNumber = random.Next(10, 99);
+            int secondNumber = random.Next(10, 99);
+            int correctAnswer = firstNumber * secondNumber;
 
             Console.WriteLine($"{firstNumber} * {secondNumber}");
 
@@ -549,6 +535,7 @@ void MultiplicationGameHard()
                 if (userGuess == correctAnswer)
                 {
                     Console.WriteLine("Correct Answer!\n");
+                    score++;
                 }
                 else if (userGuess != correctAnswer)
                 {
@@ -577,6 +564,7 @@ void DivisionGameHard()
 {
     Console.WriteLine("How many questions?: ");
     string numQuestionsIn = Console.ReadLine();
+    int score = 0;
 
     if (!int.TryParse(numQuestionsIn, out int numQuestionsOut))
     {
@@ -590,10 +578,12 @@ void DivisionGameHard()
         for (int i = 0; i < numQuestionsOut; i++)
         {
 
-            DivisionNumbersHard();
+            var divisionNumbers = DivisionNumbersHard();
+            int firstNumber = divisionNumbers[0];
+            int secondNumber = divisionNumbers[1];
 
             Console.WriteLine($"{firstNumber} / {secondNumber}");
-            correctAnswer = firstNumber / secondNumber;
+            int correctAnswer = firstNumber / secondNumber;
 
             Console.WriteLine("Enter your guess:");
             string userInput = Console.ReadLine();
@@ -604,6 +594,7 @@ void DivisionGameHard()
                 if (userGuess == correctAnswer)
                 {
                     Console.WriteLine("Correct Answer!\n");
+                    score++;
                 }
                 else if (userGuess != correctAnswer)
                 {
@@ -628,44 +619,45 @@ void DivisionGameHard()
         Console.WriteLine($"Time Elapsed: {elapsedSeconds}s");
     }
 }
-void DivisionNumbersEasy()
+int[] DivisionNumbersEasy()
+{
+    Random random = new Random();
+    int firstNumber = random.Next(1, 99);
+    int secondNumber = random.Next(1, 99);
+    
+    var result = new int[2];
+
+    while (firstNumber % secondNumber != 0)
     {
-        Random random = new Random();
-
-        do
-        {
-
-            int firstDivNumber = random.Next(1, 99);
-            int secondDivNumber = random.Next(1, 99);
-
-            if (firstDivNumber % secondDivNumber == 0 && firstDivNumber != secondDivNumber)
-            {
-                firstNumber = firstDivNumber;
-                secondNumber = secondDivNumber;
-                break;
-            }
-        } while (true);
-
+        firstNumber = random.Next(1, 99);
+        secondNumber = random.Next(1, 99);
     }
-void DivisionNumbersHard()
+
+    result[0] = firstNumber;
+    result[1] = secondNumber;
+
+    return result;
+
+}
+int[] DivisionNumbersHard()
+{
+    Random random = new Random();
+    int firstNumber = random.Next(1, 999);
+    int secondNumber = random.Next(1, 999);
+
+    var result = new int[2];
+
+    while (firstNumber % secondNumber != 0)
     {
-        Random random = new Random();
-
-        do
-        {
-
-            int firstDivNumber = random.Next(1, 999);
-            int secondDivNumber = random.Next(1, 999);
-
-            if (firstDivNumber % secondDivNumber == 0 && firstDivNumber != secondDivNumber)
-            {
-                firstNumber = firstDivNumber;
-                secondNumber = secondDivNumber;
-                break;
-            }
-        } while (true);
-
+        firstNumber = random.Next(1, 999);
+        secondNumber = random.Next(1, 999);
     }
+
+    result[0] = firstNumber;
+    result[1] = secondNumber;
+
+    return result;
+}
 void MenuReturn()
     {
         Console.WriteLine("Would you like to return to the menu? Y/N : ");

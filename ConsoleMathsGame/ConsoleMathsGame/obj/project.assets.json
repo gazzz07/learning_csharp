@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\CSharp\\ConsoleMathsGame\\ConsoleMathsGame\\ConsoleMathsGame.csproj",
+      "projectUniqueName": "C:\\Git\\learning_csharp\\ConsoleMathsGame\\ConsoleMathsGame\\ConsoleMathsGame.csproj",
       "projectName": "ConsoleMathsGame",
-      "projectPath": "C:\\Git\\CSharp\\ConsoleMathsGame\\ConsoleMathsGame\\ConsoleMathsGame.csproj",
+      "projectPath": "C:\\Git\\learning_csharp\\ConsoleMathsGame\\ConsoleMathsGame\\ConsoleMathsGame.csproj",
       "packagesPath": "C:\\Users\\seymo\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\CSharp\\ConsoleMathsGame\\ConsoleMathsGame\\obj\\",
+      "outputPath": "C:\\Git\\learning_csharp\\ConsoleMathsGame\\ConsoleMathsGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
