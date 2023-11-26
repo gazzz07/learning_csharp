@@ -50,5 +50,32 @@
                 Console.WriteLine(game);
             }
         }
+        internal static int[] GenerateEasyNumbers()
+        {
+            Random random = new Random();
+            int firstEasyNumber = random.Next(1, 9);
+            int secondEasyNumber = random.Next(1, 9);
+
+            var result = new int[2];
+
+            result[0] = firstEasyNumber;
+            result[1] = secondEasyNumber;
+
+            return result;
+
+        }
+        internal static int[] GenerateHardNumbers()
+        {
+            Random random = new Random();
+            int firstHardNumber = random.Next(1, 99);
+            int secondHardNumber = random.Next(1, 99);
+
+            var result = new int[2];
+
+            result[0] = firstHardNumber;
+            result[1] = secondHardNumber;
+
+            return result;
+        }
     }
 }

@@ -23,64 +23,15 @@
             switch (gameChoice)
             {
                 case "+":
-                    Console.WriteLine("Easy or Hard? (E/H): ");
-                    chosenDifficulty = Console.ReadLine().ToLower().Trim();
-                    if (chosenDifficulty == "e")
-                    {
-                        Console.Clear();
-                        GameEngine.AdditionGameEasy();
-                    }
-                    else if (chosenDifficulty == "h")
-                    {
-                        Console.Clear();
-                        GameEngine.AdditionGameHard();
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Invalid choice");
-                    }
+                    GameEngine.AdditionGame();
                     break;
 
                 case "-":
-                    Console.WriteLine("Easy or Hard? (E/H): ");
-                    chosenDifficulty = Console.ReadLine().ToLower().Trim();
-                    if (chosenDifficulty == "e")
-                    {
-                        Console.Clear();
-                        GameEngine.SubtractionGameEasy();
-                    }
-                    else if (chosenDifficulty == "h")
-                    {
-                        Console.Clear();
-                        GameEngine.SubtractionGameHard();
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Invalid choice");
-                    }
+                    GameEngine.SubtractionGame();
                     break;
 
                 case "*":
-
-                    Console.WriteLine("Easy or Hard? (E/H): ");
-                    chosenDifficulty = Console.ReadLine().ToLower().Trim();
-                    if (chosenDifficulty == "e")
-                    {
-                        Console.Clear();
-                        GameEngine.MultiplicationGameEasy();
-                    }
-                    else if (chosenDifficulty == "h")
-                    {
-                        Console.Clear();
-                        GameEngine.MultiplicationGameHard();
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Invalid choice");
-                    }
+                    GameEngine.MultiplicationGame();
                     break;
 
                 case "/":
@@ -105,24 +56,7 @@
                     break;
 
                 case "r":
-
-                    Console.WriteLine("Easy or Hard? (E/H): ");
-                    chosenDifficulty = Console.ReadLine().ToLower().Trim();
-                    if (chosenDifficulty == "e")
-                    {
-                        Console.Clear();
-                        GameEngine.EasyRandomGame();
-                    }
-                    else if (chosenDifficulty == "h")
-                    {
-                        Console.Clear();
-                        GameEngine.HardRandomGame();
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Invalid choice");
-                    }
+                    GameEngine.RandomGame();
                     break;
 
                 case "v":
