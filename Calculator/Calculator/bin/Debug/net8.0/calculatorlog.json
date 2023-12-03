@@ -1,0 +1,34 @@
+{
+  "Operations": [
+    {
+      "Operand1": 14.0,
+      "Operand2": 12.0,
+      "Operation": "Add",
+      "Result": 26.0
+    },
+    {
+      "Operand1": 99.0,
+      "Operand2": 12.0,
+      "Operation": "Subtract",
+      "Result": 87.0
+    },
+    {
+      "Operand1": 144.0,
+      "Operand2": 12.0,
+      "Operation": "Multiply",
+      "Result": 1728.0
+    },
+    {
+      "Operand1": 99.0,
+      "Operand2": 112.0,
+      "Operation": "Add",
+      "Result": 211.0
+    },
+    {
+      "Operand1": 123.0,
+      "Operand2": 123.0,
+      "Operation": "Add",
+      "Result": 246.0
+    }
+  ]
+}

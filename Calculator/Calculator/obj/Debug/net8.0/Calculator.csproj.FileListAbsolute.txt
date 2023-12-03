@@ -13,3 +13,8 @@ C:\Git\learning_csharp\Calculator\Calculator\obj\Debug\net8.0\refint\Calculator.
 C:\Git\learning_csharp\Calculator\Calculator\obj\Debug\net8.0\Calculator.pdb
 C:\Git\learning_csharp\Calculator\Calculator\obj\Debug\net8.0\Calculator.genruntimeconfig.cache
 C:\Git\learning_csharp\Calculator\Calculator\obj\Debug\net8.0\ref\Calculator.dll
+C:\Git\learning_csharp\Calculator\Calculator\bin\Debug\net8.0\CalculatorLibrary.dll
+C:\Git\learning_csharp\Calculator\Calculator\bin\Debug\net8.0\CalculatorLibrary.pdb
+C:\Git\learning_csharp\Calculator\Calculator\obj\Debug\net8.0\Calculator.csproj.AssemblyReference.cache
+C:\Git\learning_csharp\Calculator\Calculator\obj\Debug\net8.0\Calculator.csproj.CopyComplete
+C:\Git\learning_csharp\Calculator\Calculator\bin\Debug\net8.0\Newtonsoft.Json.dll
