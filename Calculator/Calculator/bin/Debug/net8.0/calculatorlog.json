@@ -2,5 +2,25 @@
   "Operations": [
     {
       "Operand1": 100.0,
+      "Operation": "Sin",
       "Result": -0.5063656411097588
+    },
+    {
+      "Operand1": 100.0,
+      "Operation": "Square root",
+      "Result": 10.0
+    },
+    {
+      "Operand1": 100.0,
+      "Operand2": 3.0,
+      "Operation": "Divide",
+      "Result": 33.333333333333336
+    },
+    {
+      "Operand1": 100.0,
+      "Operand2": 100.0,
+      "Operation": "Add",
+      "Result": 200.0
     }
+  ]
+}

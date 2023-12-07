@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System.Text;
 namespace CalculatorLibrary
 {
     public class Calculator
@@ -75,32 +74,33 @@ namespace CalculatorLibrary
             writer.WriteStartObject();
             writer.WritePropertyName("Operand1");
             writer.WriteValue(num1);
+            writer.WritePropertyName("Operation");
 
             switch (op2)
             {
                 case "r":
-                    result = Math.Sqrt((double)num1);
-                    //writer.WriteValue("Square Root");
+                    result = Math.Sqrt(num1);
+                    writer.WriteValue("Square root");
                     sums.Add($"Square root of {num1} = {result}");
                     break;
                 case "10x":
                     result = num1 * 10;
-                    //writer.WriteValue("10x");
+                    writer.WriteValue("10x");
                     sums.Add($"10x {num1} = {result}");
                     break;
                 case "sin":
                     result = Math.Sin(num1);
-                    //writer.WriteValue("Sin");
+                    writer.WriteValue("Sin");
                     sums.Add($"Sin of {num1} = {result}");
                     break;
                 case "tan":
                     result = Math.Tan(num1);
-                    //writer.WriteValue("Tan");
+                    writer.WriteValue("Tan");
                     sums.Add($"Tan of {num1} = {result}");
                     break;
                 case "cos":
                     result = Math.Cos(num1);
-                    //writer.WriteValue("Cos");
+                    writer.WriteValue("Cos");
                     sums.Add($"Cos of {num1} = {result}");
                     break;
                 default:
@@ -113,7 +113,6 @@ namespace CalculatorLibrary
 
             return result;
         }
-
         public void Finish()
         {
             writer.WriteEndArray();

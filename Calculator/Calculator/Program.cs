@@ -15,7 +15,6 @@ namespace CalculatorProgram
             while (!endApp)
             {
 
-
                 string numInput1 = "";
                 string numInput2 = "";
                 double result = 0;
@@ -23,7 +22,7 @@ namespace CalculatorProgram
 
                 Console.WriteLine("Type a number, and then press Enter: ");
                 numInput1 = Console.ReadLine();
-
+                
                 double cleanNum1 = 0;
                 while (!double.TryParse(numInput1, out cleanNum1))
                 {
