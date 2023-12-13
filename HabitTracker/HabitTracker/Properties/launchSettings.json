@@ -2,7 +2,7 @@
   "profiles": {
     "HabitTracker": {
       "commandName": "Project",
-      "workingDirectory": "C:\\Git\\learning_csharp\\HabitTracker\\HabitTracker\\HabitTracker.csproj"
+      "workingDirectory": "C:\\Git\\learning_csharp\\HabitTracker\\HabitTracker"
     }
   }
 }
