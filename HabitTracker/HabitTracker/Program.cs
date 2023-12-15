@@ -51,10 +51,11 @@ void UserMenu()
             case "0":
                 Console.WriteLine("Goodbye");
                 closeApp = true;
+                Environment.Exit(0);
                 break;
             default:
                 Console.Clear();
-                Console.WriteLine("Invalid, please select an option.");
+                Console.WriteLine("\nInvalid, please select an number from the list.\n");
                 break;
         }
     }
@@ -121,14 +122,43 @@ void Read()
 void Update()
 {
     Console.Clear();
-    Console.WriteLine("Update Table");
+    Read();
+
+    var recordId = GetNumberInput("\n\nPlease type the ID of the record you want to update, or press 0 to return to the main menu.");
+
+    using (var connection = new SqliteConnection(connectionString))
+    {
+        connection.Open();
+
+        var checkCmd = connection.CreateCommand();
+        checkCmd.CommandText = $"SELECT EXISTS(SELECT 1 FROM coding_hours WHERE Id = {recordId})";
+        int checkQuery = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+        if (checkQuery == 0)
+        {
+            Console.WriteLine($"\n\nRecord with Id {recordId} doesn't exist.\n\n");
+            connection.Close();
+            Update();
+        }
+
+        string date = GetDateInput();
+
+        int quantity = GetNumberInput("\n\nPlease insert the number of hours (to the nearest hour) spent learning C# with The C# Academy today!");
+
+        var tableCmd = connection.CreateCommand();
+        tableCmd.CommandText =
+            $"UPDATE coding_hours SET date = '{date}', quantity = {quantity} WHERE Id = '{recordId}'";
+        tableCmd.ExecuteNonQuery();
+
+        connection.Close();
+    }
 }
 void Delete()
 {
     Console.Clear();
     Read();
 
-    var recordId = GetNumberInput("\n\nPlease type the Id of the record you wish to delete, or press 0 to return to the main menu.");
+    var recordId = GetNumberInput("\n\nPlease type the Id of the record you want to delete, or press 0 to return to the main menu.");
 
     using (var connection = new SqliteConnection(connectionString))
     {
@@ -146,7 +176,7 @@ void Delete()
         }
 
     }
-    Console.WriteLine($"\n\nRecord with {recordId} was deleted. \n\n");
+    Console.WriteLine($"\n\nRecord {recordId} was deleted. \n\n");
 }
 string GetDateInput()
 {
@@ -155,6 +185,12 @@ string GetDateInput()
     string dateInput = Console.ReadLine();
 
     if (dateInput == "0") UserMenu();
+
+    while (!DateTime.TryParseExact(dateInput, "dd-MM-yy", new CultureInfo("en-US"), DateTimeStyles.None, out _))
+    {
+        Console.WriteLine("\n\nInvalid date. (Format: dd-mm-yy). Please enter a correctly formatted date, or type 0 to return to the main menu:\n\n");
+        dateInput = Console.ReadLine();
+    }
 
     return dateInput;
 }
@@ -166,6 +202,12 @@ int GetNumberInput(string message)
     string numberInput = Console.ReadLine();
 
     if (numberInput == "0") UserMenu();
+
+    while (!Int32.TryParse(numberInput, out _) || Convert.ToInt32(numberInput) < 0)
+    {
+        Console.WriteLine("\n\nInvalid number. Please try again.");
+        numberInput = Console.ReadLine();
+    }
 
     int finalInput = Convert.ToInt32(numberInput);
 
