@@ -8,7 +8,7 @@ using (var connection = new SqliteConnection(connectionString))
     connection.Open();
     var tableCmd = connection.CreateCommand();
 
-    tableCmd.CommandText = @"CREATE TABLE IF NOT EXISTS coding_hours (
+    tableCmd.CommandText = @"CREATE TABLE IF NOT EXISTS running (
                                 Id INTEGER PRIMARY KEY AUTOINCREMENT,
                                 Date TEXT,
                                 Quantity INTEGER
@@ -27,15 +27,16 @@ void UserMenu()
     bool closeApp = false;
     while (closeApp == false)
     {
-
-
         Console.WriteLine("Habit Tracker Main Menu\n------------\nPlease select an option: ");
-        Console.WriteLine("'1' - Create A New Record\n'2' - Read Records\n'3' - Update Records\n'4' - Delete Records\n'0' - Exit Application");
+        Console.WriteLine("'+' - Add A New Habit To Track\n'1' - Create A New Record\n'2' - Read Records\n'3' - Update Records\n'4' - Delete Records\n'5' - Generate Habit Reports\n'0' - Exit Application");
         Console.WriteLine("-----\nYour choice: ");
         string userInput = Console.ReadLine();
 
         switch (userInput)
         {
+            case "+":
+                NewHabit();
+                break;
             case "1":
                 Create();
                 break;
@@ -46,7 +47,10 @@ void UserMenu()
                 Update();
                 break;
             case "4":
-               Delete();
+                Delete();
+                break;
+            case "5":
+                GenerateReport();
                 break;
             case "0":
                 Console.WriteLine("Goodbye");
@@ -60,19 +64,48 @@ void UserMenu()
         }
     }
 }
+void NewHabit()
+{
+    Console.Clear();
+
+    Console.WriteLine("Name of the new habit you'd like to track: ");
+    string newHabit = Console.ReadLine();
+    Console.WriteLine("Unit of measurement for the new habit: ");
+    string newUnit = Console.ReadLine();
+
+    using (var connection = new SqliteConnection(connectionString))
+    {
+        connection.Open();
+        var tableCmd = connection.CreateCommand();
+
+        tableCmd.CommandText = $@"CREATE TABLE IF NOT EXISTS {newHabit} (
+                                Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                Date TEXT,
+                                {newUnit} INTEGER
+                                )";
+
+        tableCmd.ExecuteNonQuery();
+
+        connection.Close();
+    }
+        Console.WriteLine("New Habit Created!");
+}
 void Create()
 {
     Console.Clear();
+
+
+
     string date = GetDateInput();
 
-    int quantity = GetNumberInput("\n\nPlease insert the number of hours (to the nearest hour) spent learning C# with The C# Academy today!");
+    int quantity = GetNumberInput("\n\nPlease insert the number of miles (to the nearest mile) you ran today!");
 
     using (var connection = new SqliteConnection(connectionString))
     {
         connection.Open();
         var tableCmd = connection.CreateCommand();
         tableCmd.CommandText = 
-            $"INSERT INTO coding_hours(date, quantity) VALUES('{date}', {quantity})";
+            $"INSERT INTO running(date, quantity) VALUES('{date}', {quantity})";
         tableCmd.ExecuteNonQuery();
 
         connection.Close();
@@ -85,9 +118,8 @@ void Read()
     {
         connection.Open();
         var tableCmd = connection.CreateCommand();
-        tableCmd.CommandText =
-            $"SELECT * FROM coding_hours";
-        List<CodingHours> tableData = new();
+        tableCmd.CommandText = $"SELECT * FROM running";
+        List<RunningMiles> tableData = new();
 
         SqliteDataReader reader = tableCmd.ExecuteReader();
 
@@ -96,7 +128,7 @@ void Read()
             while (reader.Read())
             {
                 tableData.Add(
-                    new CodingHours()
+                    new RunningMiles()
                     {
                         Id = reader.GetInt32(0),
                         Date = DateTime.ParseExact(reader.GetString(1), "dd-MM-yy", new CultureInfo("en-US")),
@@ -131,7 +163,7 @@ void Update()
         connection.Open();
 
         var checkCmd = connection.CreateCommand();
-        checkCmd.CommandText = $"SELECT EXISTS(SELECT 1 FROM coding_hours WHERE Id = {recordId})";
+        checkCmd.CommandText = $"SELECT EXISTS(SELECT 1 FROM running WHERE Id = {recordId})";
         int checkQuery = Convert.ToInt32(checkCmd.ExecuteScalar());
 
         if (checkQuery == 0)
@@ -143,11 +175,10 @@ void Update()
 
         string date = GetDateInput();
 
-        int quantity = GetNumberInput("\n\nPlease insert the number of hours (to the nearest hour) spent learning C# with The C# Academy today!");
+        int quantity = GetNumberInput("\n\nPlease insert the number of miles (to the nearest mile) you ran today!");
 
         var tableCmd = connection.CreateCommand();
-        tableCmd.CommandText =
-            $"UPDATE coding_hours SET date = '{date}', quantity = {quantity} WHERE Id = '{recordId}'";
+        tableCmd.CommandText = $"UPDATE running SET date = '{date}', quantity = {quantity} WHERE Id = '{recordId}'";
         tableCmd.ExecuteNonQuery();
 
         connection.Close();
@@ -164,8 +195,7 @@ void Delete()
     {
         connection.Open();
         var tableCmd = connection.CreateCommand();
-        tableCmd.CommandText =
-            $"DELETE FROM coding_hours WHERE Id = '{recordId}'";
+        tableCmd.CommandText = $"DELETE FROM running WHERE Id = '{recordId}'";
 
         int rowCount = tableCmd.ExecuteNonQuery();
 
@@ -177,6 +207,27 @@ void Delete()
 
     }
     Console.WriteLine($"\n\nRecord {recordId} was deleted. \n\n");
+}
+void GenerateReport()
+{
+    Console.Clear();
+
+    var reportInput = GetNumberInput("Which type of report would you like to run?\n'1' - Total miles ran\n'2' - Number of times miles have been logged\n'0' - Return to Main Menu\n");
+
+    switch (reportInput)
+    {
+        case 1:
+            Console.WriteLine("Total Miles");
+            TotalHoursReport();
+            break;
+        case 2:
+            Console.WriteLine("Times Logged");
+            TimesLoggedReport();
+            break;
+        default:
+            Console.WriteLine("Invalid");
+            break;
+    }
 }
 string GetDateInput()
 {
@@ -213,10 +264,57 @@ int GetNumberInput(string message)
 
     return finalInput;
 }
-public class CodingHours
+void TotalHoursReport()
+{
+    Console.Clear();
+    using (var connection = new SqliteConnection(connectionString))
+    {
+        connection.Open();
+        var tableCmd = connection.CreateCommand();
+        tableCmd.CommandText = $"SELECT SUM(quantity) FROM running";
+
+        object result = tableCmd.ExecuteScalar();
+
+        if (result != null && result != DBNull.Value)
+        {
+            int totalQuantity = Convert.ToInt32(result);
+            Console.WriteLine($"Total miles ran: {totalQuantity}");
+        } else
+        {
+            Console.WriteLine("You haven't added anything to the tracker!");
+        }
+        Console.WriteLine("Press any key to return to the main menu.");
+        Console.WriteLine("--------------------");
+        Console.ReadKey();
+    }
+}
+void TimesLoggedReport()
+{
+    Console.Clear();
+    using (var connection = new SqliteConnection(connectionString))
+    {
+        connection.Open();
+        var tableCmd = connection.CreateCommand();
+        tableCmd.CommandText = $"SELECT COUNT(DISTINCT date) FROM running";
+
+        object result = tableCmd.ExecuteScalar();
+
+        if (result != null && result != DBNull.Value)
+        {
+            int timesLogged = Convert.ToInt32(result);
+            Console.WriteLine($"You have added to your running tracker {timesLogged} times since it's creation.");
+        } else
+        {
+            Console.WriteLine("You haven't added to your running tracker yet!");
+        }
+        Console.WriteLine("Press any key to return to the main menu.");
+        Console.WriteLine("--------------------");
+        Console.ReadKey();
+    }
+}
+public class RunningMiles
 {
     public int Id { get; set; }
     public DateTime Date { get; set; }
     public int Quantity { get; set; }
-
 }
